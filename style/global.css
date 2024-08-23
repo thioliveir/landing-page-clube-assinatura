@@ -27,10 +27,10 @@
 
     --ff-raleway: "Raleway", sans-serif;
 
-    --title-lg: 700 3rem/auto var(--ff-raleway);
-    --title-md: 700 2.5rem/auto var(--ff-raleway);
-    --title-sm: 700 2rem/auto var(--ff-raleway);
-    --title-xs: 700 1rem/auto var(--ff-raleway);
+    --title-lg: 700 3rem var(--ff-raleway);
+    --title-md: 700 2.5rem var(--ff-raleway);
+    --title-sm: 700 2rem var(--ff-raleway);
+    --title-xs: 700 1rem var(--ff-raleway);
 
     --subtitle: 500 2rem/2 var(--ff-raleway);
 
@@ -39,8 +39,23 @@
     --body-sm: 400 .875rem/1.4 var(--ff-raleway);
     --body-xs: 400 .75rem/1.4 var(--ff-raleway);
     
-    --button-text: 700 .875rem/auto var(--ff-raleway);
-    --link-text: 500 .875rem/auto var(--ff-raleway);
-    --tag-text: 700 .625rem/auto var(--ff-raleway);
+    --button-text: 700 .875rem var(--ff-raleway);
+    --link-text: 500 .875rem var(--ff-raleway);
+    --tag-text: 700 .625rem var(--ff-raleway);
+}
 
+body {
+    background: var(--shape-background);
+    font: var(--body-lg);
+    color: var(--text-body);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
 }
