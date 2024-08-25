@@ -2,15 +2,11 @@
     font: var(--button-text);
     color: var(--text-title);
     background: var(--pink-dark);
+    border-radius: .5rem;
     position: relative;
     overflow: hidden;
     z-index: 1;
     display: inline-block;
-}
-.btn-sm {
-    padding: .75rem 1.25rem;
-    border-radius: .5rem;
-    position: relative;
 
     &::before {
         content: "";
@@ -29,5 +25,14 @@
     &:hover::before {
         transform: ScaleX(2);
     }
+}
+.btn-sm {
+    padding: .75rem 1.25rem;
+
+
+}
+.btn-md {
+    width: 100%;
+    padding: .75rem 3.28rem;
 }
 
