@@ -1,0 +1,127 @@
+#monthly-kit {
+    width: 100%;
+    max-width: 90rem;
+    padding-block: 14.68rem 17.37rem;
+
+    & header {
+        text-align: center;
+        margin-bottom: 5.5rem;
+
+        & h2 {
+            font: var(--title-sm);
+            color: var(--text-title);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        & p {
+            font: var(--body-md);
+        }
+
+        & img {
+            width: 2rem;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    & .castle-book {
+        width: 100%;
+        height: 57.5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        & img[src*="book.png"] {
+            width: 29.19rem;
+            position: absolute;
+            transform: translate(-17px, 10px);
+            z-index: 3;
+        }
+        & img[src*="arrow-left"] {
+            width: 10.90rem;
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+        }
+        & span:nth-child(3) {
+            font: var(--body-md);
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+        }
+        & img[src*="yellow"] {
+            width: 10.75rem;
+            height: 33.5rem;
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+            z-index: 2;
+        }
+        & img[src*="purple"] {
+            width: 10.75rem;
+            height: 33.5rem;
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+            z-index: 1;
+        }
+        & img[src*="arrow-down"] {
+            width: 9.09rem;
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+        }
+        & span:nth-child(7) {
+            font: var(--body-md);
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+        }
+        & img[src*="pin"] {
+            width: 13.85rem;
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+        }
+        & img[src*="arrow-up"] {
+            width: 6.55rem;
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+        }
+        & span:nth-child(10) {
+            font: var(--body-md);
+            position: absolute;
+            transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+        }
+
+        &:hover img[src*="arrow-left"] {
+            transform: translate(-303px, -312px);
+        }
+
+        &:hover span:nth-child(3) {
+            transform: translate(-395px, -350px);
+        }
+
+        &:hover img[src*="yellow"] {
+            transform: translate(259px, -87px) rotate(9deg);
+        }
+        &:hover img[src*="purple"] {
+            transform: translate(353px, 23px) rotate(20deg);
+
+        }
+        &:hover img[src*="arrow-down"] {
+            transform: translate(312px, 330px);
+        }
+        &:hover span:nth-child(7) {
+            transform: translate(250px, 430px);
+        }
+        &:hover img[src*="pin"] {
+            transform: translate(-272px, 274px) rotate(-14deg);
+        }
+        &:hover img[src*="arrow-up"] {
+            transform: translate(-390px, 140px) rotate(-5deg);
+        }
+        &:hover span:nth-child(10) {
+            transform: translate(-400px, 49px);
+        }
+        
+    }
+}
