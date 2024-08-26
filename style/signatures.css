@@ -5,6 +5,7 @@
     
     & header {
         text-align: center;
+        margin-bottom: 3.5rem;
 
         & h2 {
             font: var(--title-sm);
@@ -17,23 +18,21 @@
         justify-content: center;
 
         & .card {
-            position: relative;
+            width: 18.5rem;
     
             & img {
                 width: 2.1rem;
                 height: 3.38rem;
             }
             & .card-content {
-                padding-block: 2.25rem 2rem;
-                padding-inline: 2.25rem;
+                padding: 2rem 2rem 1.75rem;
                 border: 1px solid var(--shape-stroke);
                 background: var(--shape-base);
                 border-radius: 1.5rem;
 
                 & h3 {
-                    font: var(--title-sx);
                     color: var(--blue-light);
-                    margin-bottom: .86rem;
+                    margin-bottom: 1.5rem;
                 }
                 & zin-princing {
                     display: inline-block;
@@ -48,13 +47,13 @@
                 & p {
                     font: var(--body-sm);
                     color: var(--text-label);
-                    margin-bottom: 4.16rem;
+                    margin-bottom: 6.375rem;
                 }
 
                 & ul[role="list"] {
                     font: var(--body-xs);
                     margin-left: -13px;
-                    margin-bottom: 2.25rem;
+                    margin-bottom: 1.5rem;
                     
                     & li {
                         display: flex;
@@ -70,8 +69,130 @@
                     }
                 }
             }
+
+
+            &.monthly {
+                transform: translate(296px, 55px);
+
+                & .icon-star {
+                    display: flex;
+                    position: relative;
+    
+                    & img:nth-child(1) {
+                        width: 1.625rem;
+                        position: absolute;
+                        right: 315px;
+                        top: -40px;
+                    }
+                    & img:nth-child(2) {
+                        width: .81rem;
+                        position: absolute;
+                        right: 336px;
+                        top: -10px;
+                        
+                    }
+                }
+            }
+    
+            &.biannually {
+                transform: translate(0px, 55px);
+                z-index: 1;
+                position: relative;
+
+                & img {
+                    position: absolute;
+                    width: 2.81rem;
+                    top: -52px;
+                    left: 31px;
+                }
+
+                & .card-content{
+                    background: var(--shape-hover);
+                    & .title {
+                        display: flex;
+                        align-items: baseline;
+                        justify-content: space-between;
+                        margin-bottom: .9rem;
+        
+                        & h3 {
+                            margin-bottom: 0;
+                        }
+                        
+        
+                        & span {
+                            padding: 0.56rem 1.25rem;
+                            background-color: var(--shape-stroke);
+                            border-radius: 1rem;
+                            text-transform: uppercase;
+                            font: var(--tag-text);
+                        }
+                    }
+        
+                    & p {
+                        margin-bottom: 4.375rem;
+                    }
+        
+                }
+
+                &:hover {
+                    transform: translate(0px, 30px);
+                    transition: transform 500ms ease-in-out;
+                    border-radius: 1.5rem;
+                    -webkit-box-shadow: 3px 3px 37px 7px rgba(71,71,71,1);
+                    -moz-box-shadow: 3px 3px 37px 7px rgba(71,71,71,1);
+                    box-shadow: 3px 3px 37px 7px rgba(71,71,71,1);
+                }
+            }
+
+            &.annual {
+                transform: translate(-297px, 55px);
+                position: relative;
+
+                & .card-content {
+    
+                    & p {
+                        margin-bottom: 2.375rem;
+                    }
+                }
+                & .icon-star {
+                    display: flex;
+                    position: relative;
+    
+                    & img:nth-child(1) {
+                        width: 1.625rem;
+                        position: absolute;
+                        bottom: -50px;
+                        left: 310px;
+                    }
+                    & img:nth-child(2) {
+                        width: .81rem;
+                        position: absolute;
+                        bottom: -60px;
+                        left: 280px;
+                    }
+                }
+            }
+            
+            
         }
+        &:hover .monthly {
+            animation: monthlycard 500ms ease forwards ;
+        }
+        &:hover .annual {
+            animation: anualcard 500ms ease forwards ;
+        }    
+        
     }
 
 
+}
+@keyframes monthlycard {
+    to {
+        transform: rotate(-9deg) translate(-19px, 110px); 
+    }
+}
+@keyframes anualcard {
+    to {
+        transform: translate(16px, 57px) rotate(10deg);
+    }
 }
