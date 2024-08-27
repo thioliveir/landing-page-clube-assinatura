@@ -27,7 +27,6 @@
             & .card-content {
                 padding: 2rem 2rem 1.75rem;
                 border: 1px solid var(--shape-stroke);
-                background: var(--shape-base);
                 border-radius: 1.5rem;
 
                 & h3 {
@@ -72,7 +71,16 @@
 
 
             &.monthly {
-                transform: translate(296px, 55px);
+                transform: translate(296px, 60px);
+                position: relative;
+                
+                & .card-content {
+                    background: var(--shape-base);
+
+                    &:hover {
+                        animation: boxshadow 500ms ease-in-out forwards;
+                    }
+                }
 
                 & .icon-star {
                     display: flex;
@@ -92,7 +100,13 @@
                         
                     }
                 }
+
+                &:hover {
+                    animation:monthlycard 500ms ease forwards, monthlycardUp 500ms ease forwards;
+                    
+                }
             }
+
     
             &.biannually {
                 transform: translate(0px, 55px);
@@ -107,7 +121,9 @@
                 }
 
                 & .card-content{
+                    border-radius: 1.5rem;
                     background: var(--shape-hover);
+
                     & .title {
                         display: flex;
                         align-items: baseline;
@@ -129,29 +145,30 @@
                     }
         
                     & p {
-                        margin-bottom: 4.375rem;
+                        margin-bottom: 5.375rem;
+                    }
+                    &:hover {
+                        animation: boxshadow 500ms ease-in-out forwards;
                     }
         
                 }
-
                 &:hover {
-                    transform: translate(0px, 30px);
-                    transition: transform 500ms ease-in-out;
-                    border-radius: 1.5rem;
-                    -webkit-box-shadow: 3px 3px 37px 7px rgba(71,71,71,1);
-                    -moz-box-shadow: 3px 3px 37px 7px rgba(71,71,71,1);
-                    box-shadow: 3px 3px 37px 7px rgba(71,71,71,1);
+                    animation: biannuallycardUp 500ms ease forwards;
                 }
             }
 
             &.annual {
-                transform: translate(-297px, 55px);
+                transform: translate(-297px, 60px);
                 position: relative;
+                
 
                 & .card-content {
-    
+                    background: var(--shape-base);
                     & p {
                         margin-bottom: 2.375rem;
+                    }
+                    &:hover {
+                        animation: boxshadow 500ms ease forwards;
                     }
                 }
                 & .icon-star {
@@ -171,16 +188,26 @@
                         left: 280px;
                     }
                 }
+                &:hover {
+                    animation:anualcard 500ms ease forwards, anualcardUp 500ms ease forwards;
+
+                }
+
             }
             
             
         }
         &:hover .monthly {
-            animation: monthlycard 500ms ease forwards ;
+            animation: monthlycard 500ms ease forwards;
         }
+        &:hover .biannually .card-content{
+            animation: biannuallycard 500ms ease forwards;
+        }
+                
         &:hover .annual {
-            animation: anualcard 500ms ease forwards ;
-        }    
+            animation: anualcard 500ms ease forwards;
+        }
+          
         
     }
 
@@ -188,11 +215,42 @@
 }
 @keyframes monthlycard {
     to {
-        transform: rotate(-9deg) translate(-19px, 110px); 
+        transform: translate(-19px, 110px) rotate(-9deg); 
     }
 }
+@keyframes monthlycardUp {
+    to {
+        transform: translate(-19px, 100px) rotate(-9deg);
+    }
+}
+@keyframes boxshadow {
+    to {
+        box-shadow: -1px 0px 104px -3px rgba(46, 45, 46, 1);
+        border-radius: 1.5rem;
+        background: var(--shape-hover);
+    }
+}
+@keyframes biannuallycard {
+    to {
+        background: var(--shape-base);
+    }
+}
+
+@keyframes biannuallycardUp {
+    to {
+        transform: translateY(40px);
+        background: var(--shape-hover);
+        border-radius: 1.5rem
+    }
+}
+
 @keyframes anualcard {
     to {
-        transform: translate(16px, 57px) rotate(10deg);
+        transform: translate(16px, 110px) rotate(10deg);
+    }
+}
+@keyframes anualcardUp {
+    to {
+        transform: translate(16px, 100px) rotate(10deg);
     }
 }
