@@ -18,6 +18,10 @@ main {
         width: 100%;
         z-index: 1;
 
+        & .mobile-only {
+            display: none;
+        }
+
         & img {
             width: 14.375rem;
         }
@@ -163,5 +167,16 @@ main {
 @keyframes scaleIn {
     to {
         scale: 1;
+    }
+}
+
+@media (width <= 80em) {
+    main #subtitle {
+        padding: 6rem 2.5rem 5rem;
+    }
+}
+@media (width <= 64em) {
+    main #hero .content {
+        margin-block: 9.375rem;
     }
 }

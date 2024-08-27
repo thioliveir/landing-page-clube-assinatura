@@ -1,11 +1,13 @@
 #signatures {
     width: 100%;
     max-width: 90rem;
-    padding: 12.125rem 12.18rem 18.875rem;
+    padding-block: 12.125rem 6.875rem;
+    padding-inline: 12.18rem;
+    margin-inline: auto;
     
     & header {
         text-align: center;
-        margin-bottom: 3.5rem;
+        margin-bottom: 4.5rem;
 
         & h2 {
             font: var(--title-sm);
@@ -16,10 +18,11 @@
     & .cards-wrapper {
         display: flex;
         justify-content: center;
+        padding-bottom: 12rem;
 
         & .card {
             width: 18.5rem;
-    
+
             & img {
                 width: 2.1rem;
                 height: 3.38rem;
@@ -103,6 +106,10 @@
 
                 &:hover {
                     animation:monthlycard 500ms ease forwards, monthlycardUp 500ms ease forwards;
+
+                    & .icon-star img[src*="star"] {
+                        animation: starsrotate 500ms ease-in-out forwards;
+                    }
                     
                 }
             }
@@ -164,6 +171,7 @@
 
                 & .card-content {
                     background: var(--shape-base);
+
                     & p {
                         margin-bottom: 2.375rem;
                     }
@@ -190,6 +198,10 @@
                 }
                 &:hover {
                     animation:anualcard 500ms ease forwards, anualcardUp 500ms ease forwards;
+                    
+                    & .icon-star img[src*="star"] {
+                        animation: starsrotate 500ms ease-in-out forwards;
+                    }
 
                 }
 
@@ -207,8 +219,7 @@
         &:hover .annual {
             animation: anualcard 500ms ease forwards;
         }
-          
-        
+
     }
 
 
@@ -221,6 +232,7 @@
 @keyframes monthlycardUp {
     to {
         transform: translate(-19px, 100px) rotate(-9deg);
+        z-index: 2;
     }
 }
 @keyframes boxshadow {
@@ -252,5 +264,11 @@
 @keyframes anualcardUp {
     to {
         transform: translate(16px, 100px) rotate(10deg);
+        z-index: 2;
+    }
+}
+@keyframes starsrotate {
+    to {
+        transform: rotate(20deg);
     }
 }

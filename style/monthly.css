@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 90rem;
     padding-block: 14.68rem 17.37rem;
+    margin-inline: auto;
 
     & header {
         text-align: center;

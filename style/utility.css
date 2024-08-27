@@ -47,3 +47,41 @@
     
 }
 
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+
+    & svg {
+        width: 1.5rem;
+        z-index: 1;
+        fill: var(--blue-light);
+    }
+
+    &::before {
+        content: "";
+        background: var(--shape-stroke);
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &:hover svg {
+        fill: var(--text-body);
+    }
+
+}
+
