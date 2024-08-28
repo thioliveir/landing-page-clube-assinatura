@@ -126,3 +126,89 @@
         
     }
 }
+@media (max-width: 375px) {
+    #monthly-kit {
+        padding-block: 6.5rem 5.5rem;
+
+        & header {
+            margin-bottom: 4rem;
+
+            & img {
+                width: 1.25rem;
+
+            }
+
+            & p {
+                font: var(--body-sm);
+            }
+        }
+
+        & .castle-book {
+            height: 39.43rem;
+            
+            & img[src*="book.png"] {
+                width: 9.82rem;
+            }
+            & img[src*="arrow-left"] {
+                width: 3.67rem;
+            }
+            & span:nth-child(3) {
+                font: 400 .635rem var(--ff-raleway);
+            }
+            & img[src*="yellow"] {
+                width: 3.65rem;
+                height: 11.3rem;
+            }
+            & img[src*="purple"] {
+                width: 3.65rem;
+                height: 11.3rem;
+            }
+            & img[src*="arrow-down"] {
+                width: 3.06rem;
+            }
+            & span:nth-child(7) {
+                font: 400 .635rem var(--ff-raleway);
+            }
+            & img[src*="pin"] {
+                width: 4.68rem;
+            }
+            & img[src*="arrow-up"] {
+                width: 2.2rem;
+            }
+            & span:nth-child(10) {
+                font: 400 .635rem var(--ff-raleway);
+            }
+
+            &:hover img[src*="arrow-left"] {
+                transform: translate(-112px, -97px);
+            }
+    
+            &:hover span:nth-child(3) {
+                transform: translate(-135px, -113px);
+            }
+    
+            &:hover img[src*="yellow"] {
+                transform: translate(78px, -6px) rotate(9deg);
+            }
+            &:hover img[src*="purple"] {
+                transform: translate(112px, 21px) rotate(20deg);
+    
+            }
+            &:hover img[src*="arrow-down"] {
+                transform: translate(103px, 120px);
+            }
+            &:hover span:nth-child(7) {
+                transform: translate(85px, 153px);
+            }
+            &:hover img[src*="pin"] {
+                transform: translate(-102px, 99px) rotate(-14deg);
+            }
+            &:hover img[src*="arrow-up"] {
+                transform: translate(-140px, 57px) rotate(-5deg);
+            }
+            &:hover span:nth-child(10) {
+                transform: translate(-142px, 25px);
+            }
+        }
+    }
+}

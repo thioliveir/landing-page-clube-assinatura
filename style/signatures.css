@@ -272,3 +272,147 @@
         transform: rotate(20deg);
     }
 }
+
+@media (max-width: 375px) {
+    #signatures {
+        padding-block: 6.5rem;
+        padding-inline: 0;
+
+        & .cards-wrapper {
+            padding-bottom: 6rem;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            width: 100%;
+            gap: 1rem;
+            justify-content: flex-start;
+            padding-inline: 3.25rem;
+
+            & .card {
+                flex: 0 0 auto;
+                width: 18.5rem;
+            }
+
+            
+
+            & .card.monthly {
+                    transform: none;
+                    
+                    & .card-content {
+                        background: var(--shape-base);
+
+                        & h3 {
+                            font: var(--title-xs);
+                        }
+    
+                    }
+    
+                    & .icon-star {
+                        display: none;
+                    }
+    
+                    &:hover {
+                        animation: none;
+    
+                        & .icon-star img[src*="star"] {
+                            animation: none;
+                        }
+                        
+                    }
+            }
+    
+        
+            & .card.biannually {
+                    transform: none;
+                    z-index: 0;
+    
+                    & img {
+                        display: none;
+                    }
+    
+                    & .card-content{
+                        border-radius: 1.5rem;
+                        background: var(--shape-hover);
+    
+                        & .title {
+                            align-items: center;
+                            margin-bottom: 1.5rem;
+            
+                            & h3 {
+                                font: var(--title-xs);
+                            }
+                            
+                        }
+            
+                        & p {
+                            margin-bottom: 3.9rem;
+                        }
+
+                        &:hover {
+                            animation: none;
+                        }
+            
+                    }
+                    &:hover {
+                        animation: none;
+                    }
+                    
+            }
+    
+            & .card.annual {
+                    transform: none;
+                    
+    
+                    & .card-content {
+                        background: var(--shape-base);
+
+                        & h3 {
+                            font: var(--title-xs);
+                        }
+    
+                        & p {
+                            margin-bottom: 2.375rem;
+                        }
+
+                        &:hover {
+                            animation: none;
+                        }
+
+                    }
+                    & .icon-star {
+                        display: none;
+        
+                    }
+                    &:hover {
+                        animation: none;
+                        
+                        & .icon-star img[src*="star"] {
+                            animation: none;
+                        }
+    
+                    }
+    
+            }
+
+            
+
+            &:hover .monthly {
+                animation: none;
+            }
+            &:hover .biannually .card-content{
+                animation: none;
+            }
+                    
+            &:hover .annual {
+                animation: none;
+            }
+            
+        }
+    }
+    @keyframes cardUp {
+        to {
+            box-shadow: -1px 0px 104px -3px rgba(46, 45, 46, 1);
+            border-radius: 1.5rem;
+            background: var(--shape-hover);
+        }
+    }
+}

@@ -199,10 +199,12 @@ main {
             padding: 3.5rem 1.25rem 5rem;
 
                 & .content {
-                    margin-block: 2rem;
+                    margin-block: 3rem;
+                    width: inherit;
 
                     & p {
                         font: var(--body-sm);
+                        margin: 0;
                     }
                 }
             }
@@ -260,15 +262,17 @@ main {
         #hero {
             padding: 3.5rem 1.25rem 5rem;
             background-size: cover;
+            background-position: center;
             display: flex;
             height: inherit;
 
             & .content {
-                margin-block: 2rem;
+                margin-block: 3rem;
+                width: inherit;
 
                 & p {
                     font: var(--body-sm);
-                    margin-block: 1rem;
+                    margin: 1rem 0;
                 }
             }
 
@@ -288,18 +292,23 @@ main {
                 }
                 & h2 span img[src*="ouija"] {
                     width: 2.5rem;
-                    top: -3.25rem;
-                    right: -0.5rem;
-                    transform: rotate(208deg);
+                    top: 5.75rem;
+                    right: 14.5rem;
+                    transform: rotate(-26deg);
 
                     &:hover {
-                        transform: rotate(250deg) scale(1.1);
+                        transform: rotate(-56deg) scale(1.1);
                     }
                 }
                 & h2 span img[src*="crystal"] {
                     width: 2.5rem;
-                    top: 3.50rem;
-                    left: -11rem;
+                    top: 2.5rem;
+                    left: 13rem;
+                    transform: rotate(10deg);
+
+                    &:hover {
+                        transform: rotate(-10deg) scale(1.1);
+                    }
                 }
             }
         }

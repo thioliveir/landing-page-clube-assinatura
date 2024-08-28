@@ -55,3 +55,21 @@ footer {
 
     }
 }
+@media (max-width: 375px) {
+    footer {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 6.125rem 2rem 2.37rem;
+        background-size: cover;
+        background-position: center;
+
+        & .icons-wrapper {
+            display: grid;
+        
+            & img[src*="logo"] {
+                width: 9.91rem;
+                justify-self: center;
+            }
+        }
+    }
+}

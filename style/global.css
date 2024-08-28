@@ -66,6 +66,7 @@ ul[role="list"] {
 @media (max-width: 375px) {
     :root {
         --title-lg: 700 1.75rem var(--ff-raleway);
+        --title-sm: 700 1.5rem var(--ff-raleway);
         --subtitle: 500 1rem/1.4 var(--ff-raleway)
     }
 }
