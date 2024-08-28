@@ -71,6 +71,10 @@ main {
                 width: 5.5rem;
             }
 
+            & span .mobile-only {
+                display: none;
+            }
+
             &:hover h2 span:nth-child(1) {
                 animation: fadeground 200ms linear both;
                 & img {  
@@ -94,6 +98,7 @@ main {
                 & img {  
                     animation: scaleIn 200ms 1s linear both;
                 }
+
                 & strong {
                     color: var(--blue-light);
                 }
@@ -283,6 +288,10 @@ main {
 
             & .container {
                 padding: 0;
+
+                & h2 span .mobile-only {
+                    display: inline-block;
+                }
 
                 
                 & h2 span img[src*="spellbook"] {
